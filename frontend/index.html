@@ -1,1 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Secure Notes Security Center</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+  <!-- ALERT BOX -->
+  <div id="alertBox"></div>
+
+  <!-- DASHBOARD -->
+  <div class="dashboard">
+
+    <!-- HEADER -->
+    <header class="topbar">
+
+      <div>
+
+        <h1>
+          Secure Notes Security Center
+        </h1>
+
+        <p class="subtitle">
+          Cloud Secured Multi-Tenant Notes Platform
+        </p>
+
+      </div>
+
+      <div class="userInfo">
+
+        <div class="online"></div>
+
+        <span id="userEmail">
+          Authorized User
+        </span>
+
+      </div>
+
+    </header>
+
+
+    <!-- SECURITY STATUS -->
+    <section class="securityCards">
+
+      <div class="securityCard green">
+
+        <h3>Encryption</h3>
+
+        <p>ACTIVE</p>
+
+      </div>
+
+      <div class="securityCard blue">
+
+        <h3>Unauthorized Attempts</h3>
+
+<p id="unauthorizedCount">
+  Loading...
+</p>
+
+      </div>
+
+      <div class="securityCard red">
+
+        <h3>SNS Alerts</h3>
+
+        <p>ENABLED</p>
+
+      </div>
+
+      <div class="securityCard cyan">
+
+        <h3>Access Control</h3>
+
+        <p>AUTHORIZED ONLY</p>
+
+      </div>
+
+    </section>
+
+
+    <!-- MAIN CONTENT -->
+    <section class="mainContent">
+
+      <!-- LEFT SIDE -->
+      <div class="editorSection">
+
+        <h2>Create Secure Note</h2>
+
+        <textarea
+          id="noteInput"
+          placeholder="Write secure note here..."
+        ></textarea>
+
+        <div class="actionButtons">
+
+          <button
+            class="saveBtn"
+            onclick="createNote()"
+          >
+            Save Note
+          </button>
+
+          <button
+            class="updateBtn"
+            onclick="updateSelectedNote()"
+          >
+            Update Note
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT SIDE PANEL -->
+      <div class="rightPanel">
+
+        <!-- SAVED NOTES PANEL -->
+
+        <div class="notesPanel">
+
+          <h2>Saved Notes</h2>
+
+          <div id="notesContainer"></div>
+
+        </div>
+
+
+        <!-- SECURITY EVENTS PANEL -->
+
+        <div class="securityPanel">
+
+          <h2>Security Events</h2>
+
+          <div id="securityEvents">
+
+            <div class="securityEvent success">
+              ✓ CloudWatch Monitoring Active
+            </div>
+
+            <div class="securityEvent success">
+              ✓ Encryption Enabled
+            </div>
+
+            <div class="securityEvent info">
+              ✓ SNS Alert System Connected
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- LOGOUT -->
+
+        <button
+          class="logoutBtn"
+          onclick="logout()"
+        >
+          Logout
+        </button>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
