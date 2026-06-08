@@ -1,1 +1,609 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
+body {
+
+  background: #081120;
+
+  color: white;
+
+  min-height: 100vh;
+
+}
+
+.dashboard {
+
+  padding: 30px;
+
+}
+
+
+/* =====================================
+   TOP BAR
+===================================== */
+
+.topbar {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 30px;
+
+}
+
+.topbar h1 {
+
+  font-size: 42px;
+
+}
+
+.subtitle {
+
+  color: #8ca0c0;
+
+  margin-top: 8px;
+
+}
+
+.userInfo {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  background: #111c2d;
+
+  padding: 12px 20px;
+
+  border-radius: 12px;
+
+  border: 1px solid rgba(255,255,255,0.05);
+
+}
+
+.online {
+
+  width: 12px;
+
+  height: 12px;
+
+  border-radius: 50%;
+
+  background: #00ff9d;
+
+}
+
+
+/* =====================================
+   SECURITY CARDS
+===================================== */
+
+.securityCards {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  margin-bottom: 30px;
+
+}
+
+.securityCard {
+
+  background: #111c2d;
+
+  padding: 20px;
+
+  border-radius: 18px;
+
+  border: 1px solid #1f2d45;
+
+  transition: 0.3s ease;
+
+}
+
+.securityCard:hover {
+
+  transform: translateY(-4px);
+
+}
+
+.securityCard h3 {
+
+  margin-bottom: 10px;
+
+}
+
+.green {
+
+  border-left: 5px solid #00ff9d;
+
+}
+
+.blue {
+
+  border-left: 5px solid #00c2ff;
+
+}
+
+.red {
+
+  border-left: 5px solid #ff4d4d;
+
+}
+
+.cyan {
+
+  border-left: 5px solid #00e5ff;
+
+}
+
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+.mainContent {
+
+  display: flex;
+
+  gap: 25px;
+
+  align-items: flex-start;
+
+}
+
+
+/* =====================================
+   EDITOR SECTION
+===================================== */
+
+.editorSection {
+
+  flex: 2;
+
+  background: #111c2d;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  border: 1px solid #1f2d45;
+
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+
+}
+
+.editorSection h2 {
+
+  margin-bottom: 20px;
+
+  font-size: 30px;
+
+}
+
+#noteInput {
+
+  width: 100%;
+
+  height: 420px;
+
+  background: #081120;
+
+  color: white;
+
+  border: 1px solid #1f2d45;
+
+  border-radius: 18px;
+
+  padding: 20px;
+
+  resize: none;
+
+  font-size: 18px;
+
+  outline: none;
+
+  line-height: 1.6;
+
+}
+
+#noteInput:focus {
+
+  border-color: #00bfff;
+
+  box-shadow: 0 0 15px rgba(0,191,255,0.2);
+
+}
+
+
+/* =====================================
+   ACTION BUTTONS
+===================================== */
+
+.actionButtons {
+
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 20px;
+
+}
+
+.saveBtn,
+.updateBtn,
+.deleteBtn,
+.logoutBtn {
+
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 14px 22px;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: 0.3s ease;
+
+  font-weight: bold;
+
+  letter-spacing: 0.5px;
+
+}
+
+.saveBtn {
+
+  background: #00b36b;
+
+}
+
+.updateBtn {
+
+  background: #008cff;
+
+}
+
+.deleteBtn {
+
+  background: #ff4d4d;
+
+}
+
+.logoutBtn {
+
+  background: #ff4d4d;
+
+  width: 100%;
+
+}
+
+.saveBtn:hover {
+
+  transform: scale(1.05);
+
+  box-shadow: 0 0 15px rgba(0,255,150,0.5);
+
+}
+
+.updateBtn:hover {
+
+  transform: scale(1.05);
+
+  box-shadow: 0 0 15px rgba(0,150,255,0.5);
+
+}
+
+.deleteBtn:hover,
+.logoutBtn:hover {
+
+  transform: scale(1.05);
+
+  box-shadow: 0 0 15px rgba(255,70,70,0.5);
+
+}
+
+
+/* =====================================
+   RIGHT PANEL
+===================================== */
+
+.rightPanel {
+
+  width: 380px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+}
+
+
+/* =====================================
+   NOTES PANEL
+===================================== */
+
+.notesPanel {
+
+  background: #08152d;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+
+  max-height: 420px;
+
+  overflow-y: auto;
+
+}
+
+.notesPanel h2 {
+
+  color: white;
+
+  margin-bottom: 20px;
+
+  font-size: 28px;
+
+}
+
+
+/* =====================================
+   NOTE CARD
+===================================== */
+
+.noteCard {
+
+  background: rgba(255,255,255,0.04);
+
+  border-radius: 16px;
+
+  padding: 16px;
+
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(255,255,255,0.05);
+
+  transition: 0.3s ease;
+
+}
+
+.noteCard:hover {
+
+  transform: translateY(-4px);
+
+  border-color: #00bfff;
+
+  box-shadow: 0 0 18px rgba(0,191,255,0.2);
+
+}
+
+.notePreview {
+
+  color: white;
+
+  line-height: 1.5;
+
+  margin-bottom: 12px;
+
+  word-break: break-word;
+
+}
+
+.noteDate {
+
+  color: #8ca0c0;
+
+  font-size: 12px;
+
+  margin-bottom: 12px;
+
+}
+
+.noteActions {
+
+  display: flex;
+
+  gap: 10px;
+
+}
+
+
+/* =====================================
+   SECURITY EVENTS PANEL
+===================================== */
+
+.securityPanel {
+
+  background: #08152d;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+
+}
+
+.securityPanel h2 {
+
+  color: white;
+
+  margin-bottom: 20px;
+
+  font-size: 26px;
+
+}
+
+.securityEvent {
+
+  padding: 14px;
+
+  border-radius: 12px;
+
+  margin-bottom: 12px;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  transition: 0.3s ease;
+
+}
+
+.securityEvent:hover {
+
+  transform: translateX(4px);
+
+}
+
+.securityEvent.success {
+
+  background: rgba(0,255,150,0.12);
+
+  border-left: 4px solid #00ff99;
+
+  color: #c8ffe6;
+
+}
+
+.securityEvent.warning {
+
+  background: rgba(255,80,80,0.12);
+
+  border-left: 4px solid #ff4d4d;
+
+  color: #ffd2d2;
+
+}
+
+.securityEvent.info {
+
+  background: rgba(0,150,255,0.12);
+
+  border-left: 4px solid #00bfff;
+
+  color: #d6f1ff;
+
+}
+
+
+/* =====================================
+   ALERT BOX
+===================================== */
+
+#alertBox {
+
+  position: fixed;
+
+  top: 20px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 999;
+
+  min-width: 400px;
+
+}
+
+.alert {
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  font-weight: bold;
+
+}
+
+.alertError {
+
+  background: #ff4d4d;
+
+}
+
+.alertSuccess {
+
+  background: #00b36b;
+
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 1200px) {
+
+  .mainContent {
+
+    flex-direction: column;
+
+  }
+
+  .rightPanel {
+
+    width: 100%;
+
+  }
+
+  .securityCards {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+}
+
+@media (max-width: 700px) {
+
+  .securityCards {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .topbar {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+  }
+
+  .topbar h1 {
+
+    font-size: 32px;
+
+  }
+}
