@@ -287,29 +287,6 @@ Future enhancements may include:
 
 ---
 
-# Screenshots
-
-## Dashboard
-
-(Add Screenshot Here)
-
-## Cognito Users
-
-(Add Screenshot Here)
-
-## DynamoDB Table
-
-(Add Screenshot Here)
-
-## CloudWatch Logs
-
-(Add Screenshot Here)
-
-## SNS Alert Notification
-
-(Add Screenshot Here)
-
----
 
 # Learning Outcomes
 
